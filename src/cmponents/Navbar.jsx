@@ -1,7 +1,7 @@
 import { ShoppingCart } from 'lucide-react';
 import React from 'react';
 
-const Navbar = () => {
+const Navbar = ({ cartCount }) => {
     return (
         <div className=' shadow'>
             <div className="container mx-auto navbar">
@@ -32,7 +32,12 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end space-x-4">
-                    <ShoppingCart className=' cursor-pointer hover:text-[#525c74]' />
+                    <div className="relative inline-block">
+                        <ShoppingCart className="w-6 h-6 cursor-pointer text-gray-700 hover:text-indigo-500 transition" />
+                        {
+                            cartCount > 0 && <div className=' w-4 h-4 bg-orange-400 rounded-full absolute -top-2 right-0 '><p className='absolute -bottom-1 left-1 text-black'>{cartCount}</p></div>
+                        }
+                    </div>
                     <p className='text-[#101727FF] font-semibold cursor-pointer hover:text-[#525c74]'>Log in</p>
                     <a className="btn rounded-full  btn-primary" >Get Started</a>
                 </div>

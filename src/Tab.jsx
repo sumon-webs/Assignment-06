@@ -1,15 +1,21 @@
-import React, { act, Suspense, useState } from 'react';
+import React, { act, Suspense, useEffect, useState } from 'react';
 import Products from './Products';
 import Carts from './Carts';
 
-const Tab = () => {
+const Tab = ({  setCartCount }) => {
+    const [amount, setAmount] = useState(0)
 
     const [active, setActive] = useState('Products')
 
     const [cartItem, setCartItems] = useState([])
 
+    useEffect(() => {
+        setCartCount( cartItem.length)
+    }, [cartItem])
+
     const dataPromise = fetch('tools.json')
         .then(res => res.json())
+
 
     return (
         <div className=' container mx-auto space-y-6'>
@@ -26,7 +32,7 @@ const Tab = () => {
                 <button
                     onClick={() => setActive('Cart')}
                     className={`btn  rounded-full rounded-l-none px-8 ${active === 'Cart' && 'btn-primary'}`}>
-                    Cart
+                    Cart ({cartItem.length})
                 </button>
 
 
@@ -35,12 +41,12 @@ const Tab = () => {
                 {
                     active === 'Products'
                     && <Suspense fallback={<span className="loading loading-spinner"></span>}>
-                        <Products cartItem = {cartItem} setCartItems = {setCartItems} dataPromise={dataPromise} />
+                        <Products amount={amount} setAmount={setAmount} cartItem={cartItem} setCartItems={setCartItems} dataPromise={dataPromise} />
                     </Suspense>
                 }
             </div>
             {
-                active === 'Cart' && <Carts cartItem = {cartItem}/>
+                active === 'Cart' && <Carts amount={amount} setAmount={setAmount} cartItem={cartItem} setCartItems={setCartItems} />
             }
         </div>
     );
