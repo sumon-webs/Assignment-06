@@ -32,8 +32,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end space-x-4">
-                    <ShoppingCart/>
-                    <p className='text-[#101727FF] font-semibold'>Log in</p>
+                    <ShoppingCart className=' cursor-pointer hover:text-[#525c74]' />
+                    <p className='text-[#101727FF] font-semibold cursor-pointer hover:text-[#525c74]'>Log in</p>
                     <a className="btn rounded-full  btn-primary" >Get Started</a>
                 </div>
             </div>
