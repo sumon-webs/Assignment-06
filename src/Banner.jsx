@@ -4,7 +4,7 @@ import { Play } from 'lucide-react';
 
 const Banner = () => {
     return (
-        <div className="  hero  my-16">
+        <div className="  hero  my-20">
             <div className="hero-content flex-col lg:flex-row-reverse container mx-auto">
                 <img
                     src={Banners}
