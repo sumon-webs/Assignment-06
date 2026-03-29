@@ -23,6 +23,7 @@ function App() {
       <GetStarted />
       <Pricing />
       <WorkFlow />
+      <Footer />
       <ToastContainer />
     </>
   )
