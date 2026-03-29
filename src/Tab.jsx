@@ -6,6 +6,8 @@ const Tab = () => {
 
     const [active, setActive] = useState('Products')
 
+    const [cartItem, setCartItems] = useState([])
+
     const dataPromise = fetch('tools.json')
         .then(res => res.json())
 
@@ -29,14 +31,16 @@ const Tab = () => {
 
 
             </div>
+            <div className=' container mx-auto'>
+                {
+                    active === 'Products'
+                    && <Suspense fallback={<span className="loading loading-spinner"></span>}>
+                        <Products cartItem = {cartItem} setCartItems = {setCartItems} dataPromise={dataPromise} />
+                    </Suspense>
+                }
+            </div>
             {
-                active === 'Products'
-                && <Suspense>
-                    <Products dataPromise = {dataPromise}/>
-                </Suspense>
-            }
-            {
-                active === 'Cart' && <Carts />
+                active === 'Cart' && <Carts cartItem = {cartItem}/>
             }
         </div>
     );

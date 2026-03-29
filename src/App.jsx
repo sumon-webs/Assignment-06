@@ -1,6 +1,7 @@
 import './App.css'
 import Banner from './Banner'
 import Navbar from './cmponents/Navbar'
+import Footer from './Footer'
 import GetStarted from './getStarted'
 import Pricing from './Pricing'
 import RattingCard from './RattingCard'
@@ -17,6 +18,7 @@ function App() {
       <GetStarted/>
       <Pricing/>
       <WorkFlow/>
+      <Footer/>
     </>
   )
 }

@@ -1,10 +1,13 @@
 import React from 'react';
+import CartCard from './CartCard';
 
-const Carts = () => {
+const Carts = ({cartItem}) => {
     return (
-        <div className=' container mx-auto'>
-            Cart
-        </div>
+        <>
+            {
+                cartItem.map(item => <CartCard key={item.id} item = {item}/>)
+            }
+        </>
     );
 };
 
