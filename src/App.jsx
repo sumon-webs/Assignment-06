@@ -1,10 +1,10 @@
 import './App.css'
+import Navbar from './cmponents/Navbar'
 
 function App() {
   return (
     <>
-      
-      <button className=' btn'>Click me</button>
+      <Navbar/>
     </>
   )
 }
