@@ -3,13 +3,13 @@ import React from 'react';
 
 const Pricing = () => {
     return (
-        <div className=' container mx-auto my-26 space-y-28'>
+        <div className=' container mx-auto px-6 lg:px-0  lg:my-26 space-y-16 lg:space-y-28'>
             <div className='text-center'>
-                <h3 className=' text-6xl font-semibold mb-3'>Simple, Transparent Pricing</h3>
+                <h3 className=' text-3xl md:text-5xl font-semibold mb-3'>Simple, Transparent Pricing</h3>
                 <p className=' text-[#627382FF]'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
             </div>
-            <div className=' flex  justify-evenly'>
-                <div className="card w-72  bg-base-100 shadow-sm">
+            <div className=' grid gap-6 lg:gap-20  space-y-6 md:grid-cols-3'>
+                <div className="card   bg-base-100 shadow-sm">
                     <div className="flex flex-col h-full justify-between   p-4">
                         <div className='space-y-2'>
                             <div className=' space-x-1'>
@@ -41,7 +41,7 @@ const Pricing = () => {
                         <button className=' btn btn-primary rounded-full w-full item-end'>Get Started Free</button>
                     </div>
                 </div>
-                <div className="relative card w-72 text-white shadow-sm bg-primary">
+                <div className="relative card  text-white shadow-sm bg-primary">
                     <span className=' badge badge-warning absolute right-[32%] -top-2'>Most Popular</span>
                     <div className=" flex flex-col h-full justify-between   p-4">
                         <div className='space-y-2'>
@@ -84,7 +84,7 @@ const Pricing = () => {
                     </div>
                 </div>
 
-                <div className="card w-72  bg-base-100 shadow-sm">
+                <div className="card   bg-base-100 shadow-sm">
                     <div className="flex flex-col h-full justify-between   p-4">
                         <div className='space-y-2'>
                             <div className=' space-x-1'>

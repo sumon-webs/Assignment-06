@@ -18,12 +18,12 @@ const Tab = ({  setCartCount }) => {
 
 
     return (
-        <div className=' container mx-auto space-y-6'>
+        <div className=' container mx-auto space-y-6 px-6 lg:px-0'>
             <div className=' text-center  space-y-3.5 '>
-                <h2 className=' text-6xl font-semibold'>Premium Digital Tools</h2>
+                <h2 className=' text-3xl md:text-5xl font-semibold'>Premium Digital Tools</h2>
                 <p className=' text-[#627382FF]'>Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
             </div>
-            <div className=" flex justify-center pb-16">
+            <div className=" flex justify-center pb-6 md:pb-16">
                 <button
                     onClick={() => setActive('Products')}
                     className={`btn  rounded-full rounded-r-none px-8 ${active === 'Products' && 'btn-primary'}`}>
