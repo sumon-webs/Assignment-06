@@ -39,7 +39,7 @@ const Navbar = ({ cartCount }) => {
                             w-3 h-3 sm:w-4 sm:h-4 bg-orange-400 rounded-full absolute -top-2 right-0 '><p className='absolute -bottom-1 left-1 text-black text-[12px] sm:text-1xl'>{cartCount}</p></div>
                         }
                     </div>
-                    <p className='text-[#101727FF] font-semibold cursor-pointer hover:text-[#525c74]'>Log in</p>
+                    <p className='text-[#101727FF] text-[12px] sm:text-[16px] font-semibold cursor-pointer hover:text-[#525c74]'>Log in</p>
                     <a className=" text-[12px] sm:text-[16px] btn rounded-full  btn-primary" >Get Started</a>
                 </div>
             </div>
