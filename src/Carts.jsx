@@ -7,6 +7,7 @@ const Carts = ({ cartItem, setCartItems, amount, setAmount }) => {
     const handleProceed = () =>{
         setCartItems([])
         toast.success("Order success")
+        setAmount(0)
     }
 
     return (

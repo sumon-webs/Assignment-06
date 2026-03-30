@@ -2,9 +2,8 @@ import { Check } from 'lucide-react';
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 
-const ProductsCard = ({ data, cartItem, setCartItems, amount, setAmount }) => {
+const ProductsCard = ({ data, cartItem, setCartItems, amount, setAmount}) => {
     const [click, setClick] = useState(true)
-
 
     const handleBuyNow = (data) => {
         const exist = cartItem.some(c => c.id === data.id)
@@ -13,6 +12,7 @@ const ProductsCard = ({ data, cartItem, setCartItems, amount, setAmount }) => {
             toast.success(`${data.name}'s add success`)
             setAmount(amount + data.price)
             setClick(false)
+
         } else {
             toast.warning(`${data.name}'s already have cart`)
         }
@@ -20,11 +20,10 @@ const ProductsCard = ({ data, cartItem, setCartItems, amount, setAmount }) => {
 
     return (
         <>
-            <div className="card bg-base-100 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+            <div className="card bg-base-100 shadow-lg border border-gray-200  transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 ">
 
                 <div className="card-body relative space-y-2 p-4 sm:p-5 md:p-6">
 
-                    {/* Tag */}
                     <p
                         className={`absolute right-2 top-2 text-xs sm:text-sm badge badge-soft 
             ${data.tag === 'best seller'
@@ -38,30 +37,25 @@ const ProductsCard = ({ data, cartItem, setCartItems, amount, setAmount }) => {
                         {data.tag}
                     </p>
 
-                    {/* Icon */}
                     <span className='border border-gray-300 rounded-full w-fit p-1 sm:p-2 text-lg'>
                         {data.icon}
                     </span>
 
-                    {/* Title */}
                     <h3 className='text-lg sm:text-xl md:text-2xl font-semibold'>
                         {data.name}
                     </h3>
 
-                    {/* Description */}
                     <p className='text-sm sm:text-base text-[#627382FF]'>
                         {data.description}
                     </p>
 
-                    {/* Price */}
                     <p>
                         <span className='text-xl sm:text-2xl font-semibold'>
                             ${data.price}
                         </span>
-                        <span className="text-sm sm:text-base">/Month</span>
+                        <span className="text-sm sm:text-base">/{data.period}</span>
                     </p>
 
-                    {/* Features */}
                     <div className='space-y-1'>
                         {
                             data.features.map((f, index) => (

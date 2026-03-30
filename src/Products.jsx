@@ -6,9 +6,9 @@ const Products = ({ dataPromise, cartItem, setCartItems, amount, setAmount }) =>
 
     return (
         <>
-            <div className=' grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
+            <div className=' grid md:grid-cols-2 lg:grid-cols-3 gap-5 '>
                 {
-                    dataLoad.map(data => <ProductsCard amount={amount} setAmount={setAmount} cartItem={cartItem} setCartItems={setCartItems} key={data.id} data={data} />)
+                    dataLoad.map(data => <ProductsCard  amount={amount} setAmount={setAmount} cartItem={cartItem} setCartItems={setCartItems} key={data.id} data={data} />)
                 }
             </div>
         </>

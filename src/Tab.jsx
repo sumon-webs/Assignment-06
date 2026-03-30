@@ -2,7 +2,7 @@ import React, { act, Suspense, useEffect, useState } from 'react';
 import Products from './Products';
 import Carts from './Carts';
 
-const Tab = ({  setCartCount }) => {
+const Tab = ({ setCartCount }) => {
     const [amount, setAmount] = useState(0)
 
     const [active, setActive] = useState('Products')
@@ -10,11 +10,13 @@ const Tab = ({  setCartCount }) => {
     const [cartItem, setCartItems] = useState([])
 
     useEffect(() => {
-        setCartCount( cartItem.length)
+        setCartCount(cartItem.length)
     }, [cartItem])
 
     const dataPromise = fetch('tools.json')
         .then(res => res.json())
+
+
 
 
     return (
@@ -32,7 +34,9 @@ const Tab = ({  setCartCount }) => {
                 <button
                     onClick={() => setActive('Cart')}
                     className={`btn  rounded-full rounded-l-none px-8 ${active === 'Cart' && 'btn-primary'}`}>
-                    Cart ({cartItem.length})
+                    Cart {cartItem.length > 0 && (
+                        <span>({cartItem.length})</span>
+                    )}
                 </button>
 
 
