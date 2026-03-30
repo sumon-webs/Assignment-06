@@ -1,12 +1,20 @@
-# React + Vite
+Project name: DigiTools – Premium Digital Tools Marketplace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Description: DigiTools is a modern and responsive web application where users can explore and purchase premium digital tools.
 
-Currently, two official plugins are available:
+Technologies Used: DigiTools is a modern and responsive web application where users can explore and purchase premium digital tools.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Project features: 
+    1. Toggle button
+        -Initially Product button have select and show product items
+        -Click Cart button will show cart items
+        -If cart item have no data will show 'Cart is empty'
 
-## Expanding the ESLint configuration
+    2. Real life navbar Cart count
+        -After clicking buy now button count will update in navbar cart icon
+        -When will remove from cart section also will count update in cart icon
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    3. React Toastify use
+        -Click 'Buy Now' button in product item  will show a toastify alert
+        -Click 'Remove' button in cart section will show a toastify alert
+        -Click 'Proceed to checkout' in cart section will show a toastify alert
